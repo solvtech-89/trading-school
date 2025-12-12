@@ -22,8 +22,8 @@ const Testimonials = () => {
       rating: 5
     },
     {
-      name: "Dwipa",
-      role: "Professional Trader",
+      name: "Dwipha",
+      role: "CEO Solvtech.id & Entrepreneur",
       instagram: "dwpha_a",
       image: "/profil-3.jpeg",
       text: "Sudah ikut banyak kursus trading, tapi Trading School yang paling lengkap. Dari edukasi, signal, sampai sertifikat semua ada. Highly recommended!",

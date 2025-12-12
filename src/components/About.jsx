@@ -1,8 +1,8 @@
 const About = () => {
   const photos = [
-    '/documentation_photo_1_1765309246466.png',
-    '/documentation_photo_2_1765309301516.png',
-    '/documentation_photo_3_1765309318314.png',
+    '/slide-1.jpeg',
+    '/slide-2.jpeg',
+    '/slide-3.jpeg',
   ];
 
   return (

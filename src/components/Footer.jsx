@@ -26,7 +26,7 @@ const Footer = () => {
               </a>
               <a href="tel:+6281234567890" className="flex items-center gap-3 text-gray-400 hover:text-primary transition-colors">
                 <Phone size={18} />
-                <span>+62 812-3456-7890</span>
+                <span>087844461289</span>
               </a>
               <div className="flex items-center gap-3 text-gray-400">
                 <MapPin size={18} />
