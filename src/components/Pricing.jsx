@@ -1,4 +1,4 @@
-import { Check, Sparkles } from 'lucide-react';
+import { Check, Sparkles, MessageCircle } from 'lucide-react';
 
 const Pricing = () => {
   const plans = [
@@ -101,13 +101,19 @@ const Pricing = () => {
               </div>
 
               {/* CTA Button */}
-              <button className={`w-full py-4 rounded-full font-bold text-lg transition-all duration-300 ${
-                plan.popular 
-                  ? 'bg-gradient-primary text-white hover:shadow-glow-lg hover:scale-105' 
-                  : 'border-2 border-primary text-primary hover:bg-primary hover:text-secondary hover:shadow-glow'
-              }`}>
+              <a 
+                href={`https://wa.me/6287844461289?text=Halo, saya tertarik dengan paket ${plan.title} (${plan.price})`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`w-full py-4 rounded-full font-bold text-lg transition-all duration-300 flex items-center justify-center gap-2 ${
+                  plan.popular 
+                    ? 'bg-gradient-primary text-white hover:shadow-glow-lg hover:scale-105' 
+                    : 'border-2 border-primary text-primary hover:bg-primary hover:text-secondary hover:shadow-glow'
+                }`}
+              >
+                <MessageCircle size={20} />
                 Pilih Paket Ini
-              </button>
+              </a>
             </div>
           ))}
         </div>

@@ -1,28 +1,31 @@
 import { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight, Star } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Star, Instagram } from 'lucide-react';
 
 const Testimonials = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const testimonials = [
     {
-      name: "Budi Santoso",
+      name: "Alva Ahmad",
       role: "Trader Forex",
-      image: "/testimonial_1_1765309336448.png",
+      instagram: "alvaahmad_",
+      image: "/profil-1.jpeg",
       text: "Trading School benar-benar mengubah cara saya trading. Dari yang awalnya sering loss, sekarang sudah konsisten profit. Mentoring 1-on-1 nya sangat membantu!",
       rating: 5
     },
     {
-      name: "Siti Nurhaliza",
+      name: "Tanaaxy",
       role: "Crypto Trader",
-      image: "/testimonial_2_1765309354777.png",
+      instagram: "tanaaxy",
+      image: "/profil-2.jpeg",
       text: "Signal yang diberikan sangat akurat dan yang paling penting NO IB! Saya bebas pilih broker sendiri. Komunitas nya juga sangat supportive.",
       rating: 5
     },
     {
-      name: "Ahmad Wijaya",
+      name: "Dwipa",
       role: "Professional Trader",
-      image: "/testimonial_3_1765309369934.png",
+      instagram: "dwpha_a",
+      image: "/profil-3.jpeg",
       text: "Sudah ikut banyak kursus trading, tapi Trading School yang paling lengkap. Dari edukasi, signal, sampai sertifikat semua ada. Highly recommended!",
       rating: 5
     }
@@ -58,13 +61,24 @@ const Testimonials = () => {
                   src={testimonials[currentIndex].image} 
                   alt={testimonials[currentIndex].name}
                   className="w-24 h-24 rounded-full object-cover border-4 border-primary shadow-glow"
+                  style={{ objectPosition: currentIndex === 1 ? 'center 30%' : 'center center' }}
                 />
                 
                 <div className="text-center md:text-left">
                   <h3 className="text-2xl font-bold text-gradient mb-2">
                     {testimonials[currentIndex].name}
                   </h3>
-                  <p className="text-gray-400 mb-3">{testimonials[currentIndex].role}</p>
+                  <p className="text-gray-400 mb-2">{testimonials[currentIndex].role}</p>
+                  
+                  <a 
+                    href={`https://instagram.com/${testimonials[currentIndex].instagram}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-1 justify-center md:justify-start text-primary hover:text-primary/80 transition-colors mb-3"
+                  >
+                    <Instagram size={16} />
+                    <span className="text-sm">@{testimonials[currentIndex].instagram}</span>
+                  </a>
                   
                   <div className="flex gap-1 justify-center md:justify-start">
                     {[...Array(testimonials[currentIndex].rating)].map((_, i) => (
